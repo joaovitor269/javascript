@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retornando Valores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgba(20, 93, 117, 0.664);
+            font: bold 2em Segoe UI;
+            padding-left: 30px;
+            color: rgb(213, 237, 245);
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: rgb(43, 202, 255);
+            text-shadow: 3px 3px 15px blue;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testando as Habilidades no JavaScript</h1>
+
+    <script>
+        var nome = window.prompt('Me informe seu Nome: ');
+        var num = Number(window.prompt('Digite um número: '));
+        var dobro = (num * 2)
+        var met = (num / 2)
+        var quadrado = (num ** 2)
+        var ImparouPar = (num % 2 == 0) ? 'Par':'Ímpar';
+
+        document.write(`Nome: ${nome.toUpperCase()}</br>`);
+        document.write(`Número: ${num}</br>`);
+        document.write(`Dobro: ${dobro}</br>`);
+        document.write(`Metade: ${met} </br>`);
+        document.write(`Elevado ao quadrado: ${quadrado}</br>`)
+        document.write(`é par ou ímpar? ${ImparouPar}`);
+    </script>
+</body>
+</html>
