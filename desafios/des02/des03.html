@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Painel Interativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div.content{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: lightcyan;
+        }
+
+        div#painel {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+            width: 600px;
+            height: 400px;
+            border: 2px solid black;
+            font: bold 1.7em Arial;
+            border-radius: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="painel">
+            Interaja...
+        </div>
+    </div>
+
+    <script>
+        var visor = window.document.getElementById('painel')
+        visor.addEventListener('click', clicar)
+        visor.addEventListener('mouseenter', entrar)
+        visor.addEventListener('mouseout', sair)
+        visor.addEventListener('contextmenu', botaodir)
+
+        function clicar() {
+            visor.style.background = 'green'
+            visor.innerHTML = 'Você clicou!'
+        }
+
+        function entrar() {
+            visor.style.background = 'blue'
+            visor.innerHTML = 'Bem-Vindo!'
+        }
+
+        function sair() {
+            visor.style.background = 'gray'
+            visor.innerHTML = 'Passe o mouse aqui'
+        }
+
+        function botaodir() {
+            visor.style.background = 'red'
+            visor.innerHTML = 'Botão direito detectado'
+            event.preventDefault()
+        }
+    </script>
+</body>
+</html>
