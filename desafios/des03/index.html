@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Curso em Vídeo feito antes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: rgb(114, 97, 97);
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px 0px;
+            font-size: 3em;
+        }
+
+        main {
+            background-color: white;
+            width: 580px;
+            height: 340px;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#hr {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        div#img > img {
+            border-radius: 50%;
+            margin-top: 10px;
+            height: 230px;
+            width: 250px;
+            background-color: rgb(187, 187, 107);
+        }
+
+        footer > p {
+            margin-top: 15px;
+            color: white;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <main>
+        <div id="hr">
+
+        </div>
+        <div id="img">
+
+        </div>
+    </main>
+    <footer>
+        <p>@ CursoemVideo</p>
+    </footer>
+
+    <script>
+        var hrDia = new Date()
+        var hrD = hrDia.getHours()
+        var minuto = new Date()
+        var min = minuto.getMinutes()
+        var hora = document.querySelector('div#hr')
+        hora.innerHTML = `Agora são ${hrD}:${min} horas no horário de Brasília.`
+        
+        var corpo = window.document.body
+            
+            if (hrD < 12) {
+                var img = document.createElement("img")
+                img.src = "imagens-da-manha.jpg"
+                document.querySelector('div#img').appendChild(img)  
+                corpo.style.background = 'rgb(187, 187, 107)'
+            } else if (hrD <= 18) {
+                var img = document.createElement("img")
+                img.src = "fim-de-tarde.avif" 
+                document.querySelector('div#img').appendChild(img)
+                corpo.style.background = 'rgb(175, 131, 34)'
+            } else {
+                var img = document.createElement("img")
+                img.src = "img-noite.jpg"
+                document.querySelector('div#img').appendChild(img)
+                corpo.style.background = 'rgb(53, 48, 48)'
+            }
+            
+    </script>
+
+</body>
+</html>
