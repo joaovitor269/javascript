@@ -88,9 +88,11 @@
         var date = new Date()
         var anoatual = date.getFullYear()
         var idade = (anoatual - anonas)
-        
-        var sex = window.document.getElementsByClassName('sex')
-        if (sex == document.getElementById('mas')) {
+
+        var sex = window.document.getElementsByName('sex')
+        var sexm = window.document.getElementsByTagName('input')[0]
+        var sexf = window.document.getElementsByTagName('input')[1]
+        if (sex == [0]) {
             sex.innerHTML = 'Homem'
         } else {
             sex.innerHTML = 'Mulher'
