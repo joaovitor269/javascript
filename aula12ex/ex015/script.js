@@ -16,7 +16,7 @@ function verificar() {
              if (idade >= 0 && idade < 10) {
                 // Criança
                 img.setAttribute('src', 'foto-bebe-m.jpg')
-             } else if (idade >= 10 && idade < 21) {
+             } else if (idade < 21) {
                 // Jovem
                 img.setAttribute('src', 'foto-jovem-m.jpg')
              } else if (idade < 50) {
@@ -31,7 +31,7 @@ function verificar() {
              if (idade >= 0 && idade < 10) {
                 // Criança
                 img.setAttribute('src', 'foto-bebe-f.jpg')
-             } else if (idade >= 10 && idade < 21) {
+             } else if (idade < 21) {
                 // Jovem
                 img.setAttribute('src', 'foto-jovem-f.jpg')
              } else if (idade < 50) {
