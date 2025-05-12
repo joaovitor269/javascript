@@ -1,17 +1,18 @@
 function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
-    var fano = document.getElementById('txtano')
+    // Pegando ano atual
+    var fano = document.getElementById('txtano')  // Selecionando o ano de nascimento
     var res = document.querySelector('div#res')
-    if (fano.value.length == 0 || Number(fano.value) > ano) {
+    if (fano.value.length == 0 || Number(fano.value) > ano) {  // validação 
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
-        var fsex = document.getElementsByName('radsex')
-        var idade = ano - Number(fano.value)
+        var fsex = document.getElementsByName('radsex')  // Selecionando os inputs:radio o Masculino fica com o valor [0] e o feminino com o valor [1].
+        var idade = ano - Number(fano.value) // Pegando a idade do usuário
         var gênero = ''
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
-        if (fsex[0].checked) {
+        var img = document.createElement('img') // Cria a tag img no html
+        img.setAttribute('id', 'foto') // define o id="foto" para a tag img.
+        if (fsex[0].checked) { // Se o input 0 que é masculino tiver marcado então definimos o gênero que é homem e dependendo da idade, a imagem que representa uma pessoa da sua idade.
              gênero = 'Homem'
              if (idade >= 0 && idade < 10) {
                 // Criança
@@ -42,8 +43,8 @@ function verificar() {
                 img.setAttribute('src', 'foto-idoso-f.jpg')
              }
         }
-        res.style.textAling = 'center'
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
-        res.appendChild(img)
+        res.style.textAlign = 'center'
+        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.` // mostra para o usuário a idade dele e o gênero dele dps da validação.
+        res.appendChild(img) // Mostra a tag img na tela e na div com o id="res".
     }
 }   
