@@ -8,34 +8,38 @@ function contando() {
 
     if (val[0].value.length == 0 || val[1].value.length == 0) {
         res.innerHTML = 'Impossivel contar!'
-    } else if (passo == 0) {
+    } else if (passo <= 0) {
 
         alert('Passo invalidado! Considerando PASSO 1')
         passo = 1
         res.innerHTML = 'Contando: </br>'
         if (inicio < fim) {
+            // Contagem Crescente
             for(var c = inicio; c <= fim; c+= passo) {
                 res.innerHTML += `${c} \u{1F449}` // mão seta ->
             }
         } else if (fim < inicio) {
+            // Contagem Decrescente
             for(var c = inicio; c >= fim; c-= passo) {
-                res.innerHTML += `${c} \u{1F449}` // <- mão seta lado contrário
+                res.innerHTML += `${c} \u{1F449}` // mão seta ->
             }
         }
-        res.innerHTML += `\u{1F3C1}`
+        res.innerHTML += `\u{1F3C1}` // Bandeira de Chegada
         
     } else {
         
         res.innerHTML = 'Contando: </br>'
         if (inicio < fim) {
+            // Contagem Crescente
             for(var c = inicio; c <= fim; c+= passo) {
                 res.innerHTML += `${c} \u{1F449}` // mão seta ->
             }
         } else if (fim < inicio) {
+            // Contagem Decrescente
             for(var c = inicio; c >= fim; c-= passo) {
-                res.innerHTML += `${c} \u{1F449}` // <- mão seta lado contrário
+                res.innerHTML += `${c} \u{1F449}` // mão seta ->
             }
         }
-        res.innerHTML += `\u{1F3C1}`
+        res.innerHTML += `\u{1F3C1}` // Bandeira de Chegada
     }
 }
