@@ -29,6 +29,14 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
 }
 
+div > p {
+    margin: 10px 0px 15px 0px;
+}
+
+div > input[type="button"] {
+    margin-bottom: 20px;
+}
+
 footer > p {
     margin-top: 15px;
     color: white;
