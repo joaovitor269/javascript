@@ -33,6 +33,10 @@ select#flista {
     width: 150px;
 }
 
+p {
+    margin-bottom: 15px;
+}
+
 input#btn {
     display: block;
     margin: 1px 0px 15px 0px;
