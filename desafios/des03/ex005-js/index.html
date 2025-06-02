@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.3em;
+            background-color: rgba(0, 0, 0, 0.692);
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        section {
+            width: 500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        select {
+            width: 200px;
+            margin-top: 20px;
+            
+        }
+
+        footer {
+            color: white;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Analisador de Números</h1>
+        <input type="number" name="number" id="num">
+        <input type="button" value="Adicionar" onclick="adicionar()">
+        <br>
+        <select name="lista" id="lista" size="6"></select>
+        <br>
+        <input type="button" value="Finalizar" onclick="finalizar()">
+        <br>
+        <div id="res">
+
+        </div>
+    </section>
+
+    <footer>
+        @ JvxisX!
+    </footer>
+    
+    <script src="script.js"></script>
+</html>
